@@ -3,6 +3,6 @@ Web Design Project
 
 To run the application:
 
-cd ClimateChange
-DEBUG=ClimateChange:* npm start (MacOS & Linux)
-set DEBUG=ClimateChange:* & npm start (Windows)
+cd ClimateChange  
+DEBUG=ClimateChange:* npm start (MacOS & Linux)  
+set DEBUG=ClimateChange:* & npm start (Windows)  
