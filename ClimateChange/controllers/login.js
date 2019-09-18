@@ -1,12 +1,12 @@
 module.exports.post_login = function(request, result){
-	var text = ' Hello, ' + getName(request);
+	var text = 'Welcome, ' + getName(request);
 	sendBody(text, result);
 };
 
 
 function getName(request){
-	var firstName = request.param('firstName');
-	return firstName;
+	var userName = request.param('user');
+	return userName;
 }
 
 function sendBody(text, result){
