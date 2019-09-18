@@ -3,13 +3,13 @@ var router = express.Router();
 var path = require('path');
 //var ctrlLogin = require("../controllers/login");
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-	res.render('index', { title: 'Express' });
+/* LANDING PAGE IN HTML */
+router.get('/', function(req,res,next) {
+	res.sendFile(path.join(__dirname+'/../public/html/index.html'));
 });
 
 
-//login page in html
+/* LOGIN PAGE IN HTML */
 router.get('/login', function(req,res) {
 	res.sendFile(path.join(__dirname+'/../public/html/login.html'));
 });

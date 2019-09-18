@@ -19,6 +19,7 @@ function sendBody(text, result){
 	        
 	        + '<body style="background-color:powderblue;">\n'
 	        // + ' ' + text + '\n' // insert the body text
+			+ '<h1 class="h1">HOME PAGE AFTER LOGIN</h1>'
 	        + '<h2 style="text-align: center;margin-top: 20%">'+ text +'\n'
 	        + '</body>\n'
 	        + '</html>\n';
