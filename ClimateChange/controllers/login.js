@@ -10,15 +10,18 @@ function getName(request){
 }
 
 function sendBody(text, result){
-	var html = '<!DOCTYPE html>\n'
-		+ '<html lang="en-US">\n'
-		+ '<head>\n'
-		+ ' <meta charset="UTF-8">\n'
-		+ ' <title>Form Examples</title>\n'
-		+ '</head>\n'
-		+ '<body>\n'
-		+ ' ' + text + '\n' // insert the body text
-		+ '</body>\n'
-		+ '</html>\n';
-	result.send(html);
-}
+	    var html = '<!DOCTYPE html>\n'
+	        + '<html lang="en-US">\n'
+	        // + '<head>\n'
+	        // + ' <meta charset="UTF-8">\n'
+	        // + ' <title>Form Examples</title>\n'
+	        // + '</head>\n'
+	        
+	        + '<body style="background-color:powderblue;">\n'
+	        // + ' ' + text + '\n' // insert the body text
+	        + '<h2 style="text-align: center;margin-top: 20%">'+ text +'\n'
+	        + '</body>\n'
+	        + '</html>\n';
+	    result.send(html);
+	}
+	
