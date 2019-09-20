@@ -21,13 +21,23 @@ router.post('/', function(req, res, next) {
 });*/
 
 
-router.post('/', function(req,res){
-	 // res.sendFile('public/html/homepage.html', { root : __dirname});
-	  //__dirname : It will resolve to your project folder.
-	  
-	//res.sendFile( __dirname + "/../public/html/" + "homepage.html" );
-	
+router.get('/', function(req, res){
 	res.sendFile(path.join(__dirname + '/../public/html/homepage.html'));
+});
+
+router.post('/', function(req, res){
+	
+	var userName = req.body.user;
+	var password = req.body.password;
+
+	console.log("User exists? " + userMap.has(userName));
+	console.log("Password: " + userMap.get(userName));
+	console.log("Password matches?: " + (password == userMap.get(userName)));
+	
+	if (userMap.has(userName) && password == userMap.get(userName)) {
+		res.redirect('/home');
+	}
+	res.redirect('/login');
 });
 
 

@@ -3,7 +3,7 @@
 <head>
 
 
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../stylesheets/style.css">
 
 </head>
 <body>
@@ -13,23 +13,21 @@
 <div class="login-page">
   <div>
     <form class="form" action="/home" method="post">
-    <label>Already have an account? Sign In!</label>
-        <input type="text" placeholder="username" name="user"/>
-      <input type="password" placeholder="password"/>
-      <button type="submit" value="Submit">Log In</button>
-     
+    	<label>Already have an account? Sign In!</label>
+        <input type="text" placeholder="username" name="user" required/>
+     	<input type="password" placeholder="password" name="password" required/>
+      <button type="submit" value="Submit">SIGN IN</button>
     </form>
   </div>
 </div>
 
 <div class="login-page">
   <div>
-    <form class="form" action="/home" method="post">
-    <label>New User? Sign Up!</label>
-        <input type="text" placeholder="username" name="user"/>
-      <input type="password" placeholder="password"/>
-      <button type="submit" value="Submit">Register</button>
-     
+    <form class="form" action="/login" method="post">
+   		<label>New User? Sign Up!</label>
+        <input type="text" placeholder="username" name="user" required/>
+      	<input type="password" placeholder="password" name="password" required/>
+      	<button type="submit" value="Submit">REGISTER</button>
     </form>
   </div>
 </div>
