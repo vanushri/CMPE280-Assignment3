@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
 }
 
 a {
@@ -8,11 +8,13 @@ a {
 }
 
 body {
- background-image: url('/../images/landingpage.jpg');
- background-color: #cccccc;
+  background-image: url('/../images/landingpage.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
 }
 .h1{
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Raleway", sans-serif
   text-transform: uppercase;
   color: #875df0;
   font-size: 50px;
@@ -76,17 +78,11 @@ button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[
   
 }
 
-
+/* INDEX PAGE CSS */
 body,h1 {font-family: "Raleway", sans-serif}
 body, html {height: 100%}
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
-.bgimg {
-  background-image: url('/../images/landingpage.jpg');
-  min-height: 100%;
-  background-position: center;
-  background-size: cover;
-}
 
 
 .display-middle{position:absolute;top:50%;left:20%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
