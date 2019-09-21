@@ -25,7 +25,7 @@ router.get('/login', function(req,res) {
 		messages.message2 = "User already present";
 	}
 	if (req.param('registered') == 1) {
-		messages.message2 = "User registered";
+		messages.message2 = "User registered successfully";
 	}
 	res.render(__dirname + '/../public/html/login.html', messages);
 });
@@ -43,7 +43,7 @@ router.post('/login', function(req,res) {
 	}
 	userMap.set(userName, password);
 	console.log("Map size is now " + userMap.size);
-	//registered=1 : User already present
+	//registered=1 : User registered successfully
 	res.redirect('/login?registered=1');
 });
 
