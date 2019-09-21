@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var path = require('path');
-var ctrlLogin = require("../controllers/login");
+//var ctrlLogin = require("../controllers/login_old");
 
 //we can take either approach, you can comment the PUG code and open HTML or vice versa 
 
@@ -12,7 +12,7 @@ var ctrlLogin = require("../controllers/login");
 //Approach 2 : home page with PUG
 /*
 router.post('/', function(req, res, next) {
-	res.render('homeP', { title1: 'Hello vanu' });
+	res.render('homeP', { title1: 'Hello' });
 });
 */
 
