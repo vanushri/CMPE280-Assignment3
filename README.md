@@ -9,8 +9,7 @@ set DEBUG=ClimateChange:* & npm start (Windows)
 
 launch ->  localhost:3000 
 
-&nbsp;Assigment 2: 
-Features: 
+&nbsp;Assigment 2 Features: 
 - login/sign in
 - register
 - search for articles 
