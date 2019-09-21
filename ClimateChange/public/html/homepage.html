@@ -2,42 +2,9 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style> * { box-sizing: border-box;}
-
-#input {
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-#table {
-  border-collapse: collapse;
-  width: 100%;
-  border: 1px solid #ddd;
-  font-size: 18px;
-}
-
-#table th, #myTable td {
-  text-align: left;
-  padding: 12px;
-}
-
-#table tr {
-  border-bottom: 1px solid #ddd;
-}
-
-#table tr.header, #myTable tr:hover {
-  background-color: #f1f1f1;
-}
-</style>
+<link rel="stylesheet" href="../stylesheets/homepage.css">
 </head>
 <body>
-
-
 <h2>
 	<% if (currUser) { %>
   		Welcome <%= currUser %> !
@@ -55,7 +22,7 @@
   <tr>
     <td>
             <a href="https://www.bloomberg.com/news/articles/2019-09-18/investors-managing-16-trillion-demand-action-on-deforestation">
-                <div style="height:100%;width:100%">
+                <div class="article_div">
                         Investors With $16 Trillion Want Deforestation Action
                 </div>
               </a>
@@ -65,7 +32,7 @@
   <tr>
         <td>
                 <a href="https://news.mongabay.com/2019/09/brazilian-amazon-fires-scientifically-linked-to-2019-deforestation-report/ ">
-                    <div style="height:100%;width:100%">
+                        <div class="article_div">
                             Brazilian Amazon fires scientifically linked to 2019 deforestation: report
                     </div>
                   </a>
@@ -75,7 +42,7 @@
   <tr>
         <td>
                 <a href="https://e360.yale.edu/features/will-deforestation-and-warming-push-the-amazon-to-a-tipping-point ">
-                    <div style="height:100%;width:100%">
+                        <div class="article_div">
                             Will Deforestation and Warming Push the Amazon to a Tipping Point?
                     </div>
                   </a>
@@ -85,7 +52,7 @@
   <tr>
         <td>
                 <a href="https://science.sciencemag.org/content/365/6456/853 ">
-                    <div style="height:100%;width:100%">
+                        <div class="article_div">
                             Amazon fires clearly linked to deforestation, scientists say
                     </div>
                   </a>
@@ -95,7 +62,7 @@
   <tr>
         <td>
                 <a href="https://www.nationalgeographic.com/environment/2019/08/wildfires-in-amazon-caused-by-deforestation/ ">
-                    <div style="height:100%;width:100%">
+                        <div class="article_div">
                             The Amazon is burning at record rates—and deforestation is to blame
                     </div>
                   </a>
@@ -105,7 +72,7 @@
   <tr>
         <td>
                 <a href="https://truthout.org/articles/10-things-you-need-to-know-about-the-fires-in-the-amazon/">
-                    <div style="height:100%;width:100%">
+                        <div class="article_div">
                             10 Things You Need to Know About the Fires in the Amazon
                     </div>
                   </a>
@@ -115,7 +82,7 @@
   <tr>
         <td>
                 <a href="https://news.mongabay.com/2019/09/amazon-deforestation-and-development-heighten-amazon-fire-risk-study/ ">
-                    <div style="height:100%;width:100%">
+                        <div class="article_div">
                             Amazon deforestation and development heighten Amazon fire risk: study
                     </div>
                   </a>
@@ -125,7 +92,7 @@
   <tr>
         <td>
                 <a href="https://www.latimes.com/opinion/editorials/la-ed-climate-change-crisis-global-warming-part-1-story.html ">
-                    <div style="height:100%;width:100%">
+                        <div class="article_div">
                             Editorial: Climate change is already here. 2020 could be your last chance to stop an apocalypse
                     </div>
                   </a>
@@ -135,7 +102,7 @@
   <tr>
         <td>
                 <a href="https://www.scientificamerican.com/article/global-warming-has-been-influencing-drought-for-a-century/ ">
-                    <div style="height:100%;width:100%">
+                        <div class="article_div">
                             Global Warming Has Been Influencing Drought for a Century
                     </div>
                   </a>
@@ -145,7 +112,7 @@
   <tr>
         <td>
                 <a href="https://www.usatoday.com/story/news/nation/2019/03/15/california-drought-free-after-7-years-dry-conditions-remain/3168753002/ ">
-                    <div style="height:100%;width:100%">
+                        <div class="article_div">
                             Mediterranean climate': California drought ends after more than 7 years, but dry conditions will return
                     </div>
                   </a>
@@ -155,7 +122,7 @@
   <tr>
         <td>
                 <a href="https://www.business-standard.com/article/pti-stories/poor-countries-will-need-to-increase-carbon-footprint-to-address-hunger-study-119091700109_1.html ">
-                    <div style="height:100%;width:100%">
+                        <div class="article_div">
                             Developing nations should increase carbon footprint to tackle hunger: Study
                     </div>
                   </a>
@@ -165,7 +132,7 @@
   <tr>
         <td>
                 <a href="https://www.manilatimes.net/2019/09/19/opinion/columnists/topanalysis/poor-countries-must-increase-carbon-footprint-to-address-hunger-says-study/618571/ ">
-                    <div style="height:100%;width:100%">
+                        <div class="article_div">
                             Poor countries must increase carbon footprint to address hunger, says study
                     </div>
                   </a>
@@ -175,7 +142,7 @@
   <tr>
         <td>
                 <a href="https://www.wsj.com/articles/how-to-get-rid-of-carbon-emissions-pay-farmers-to-bury-them-11568211869 ">
-                    <div style="height:100%;width:100%">
+                        <div class="article_div">
                             How to Get Rid of Carbon Emissions: Pay Farmers to Bury Them
                     </div>
                   </a>
@@ -185,7 +152,7 @@
   <tr>
         <td>
                 <a href="https://www.scientificamerican.com/article/climate-change-is-having-widespread-health-impacts/ ">
-                    <div style="height:100%;width:100%">
+                        <div class="article_div">
                             Climate Change Is Having Widespread Health Impacts
                     </div>
                   </a>
@@ -195,7 +162,7 @@
   <tr>
         <td>
                 <a href="https://www.truthdig.com/articles/climate-change-is-already-hitting-europe-harder-than-anyone-expected/ ">
-                    <div style="height:100%;width:100%">
+                        <div class="article_div">
                             Climate Change Is Already Hitting Europe Harder Than Anyone Expected
                     </div>
                   </a>
@@ -205,7 +172,7 @@
   <tr>
         <td>
                 <a href="https://www.nature.com/immersive/d41586-019-02711-4/index.html ">
-                    <div style="height:100%;width:100%">
+                        <div class="article_div">
                             The hard truths of climate change — by the numbers
                     </div>
                   </a>
@@ -215,7 +182,7 @@
   <tr>
         <td>
                 <a href="https://eos.org/articles/global-warming-is-conquering-the-vikings ">
-                    <div style="height:100%;width:100%">
+                        <div class="article_div">
                             Global Warming Is Conquering the Vikings
                     </div>
                   </a>
@@ -225,7 +192,7 @@
   <tr>
         <td>
                 <a href="https://insideclimatenews.org/news/03092019/hurricane-dorian-climate-change-stall-record-wind-speed-rainfall-intensity-global-warming-bahamas ">
-                    <div style="height:100%;width:100%">
+                        <div class="article_div">
                             Why Are Hurricanes Like Dorian Stalling, and Is Global Warming Involved?
                     </div>
                   </a>
@@ -235,7 +202,7 @@
   <tr>
         <td>
                 <a href="https://www.scientificamerican.com/article/earths-orbital-shifts-may-have-triggered-ancient-global-warming/ ">
-                    <div style="height:100%;width:100%">
+                        <div class="article_div">
                             Earth’s Orbital Shifts May Have Triggered Ancient Global Warming
                     </div>
                   </a>
