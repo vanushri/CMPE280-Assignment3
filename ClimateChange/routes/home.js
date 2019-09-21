@@ -18,7 +18,6 @@ router.post('/', function(req, res, next) {
 */
 
 router.get('/', function(req, res){
-	//res.sendFile(path.join(__dirname + '/../public/html/homepage.html'));
 	res.render(__dirname + '/../public/html/homepage.html', {message1: currUser});
 });
 
