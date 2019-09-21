@@ -37,6 +37,13 @@
 </head>
 <body>
 
+
+<h2>
+	<% if (currUser) { %>
+  		Welcome <%= currUser %> !
+	<% } %>
+</h2>
+
 <h2>Learn About Climate Change</h2>
 
 <input type="text" id="input" onkeyup="myFunction()" placeholder="Search for articles.." title="Type a name">

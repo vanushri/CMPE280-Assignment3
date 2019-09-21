@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 var ctrlLogin = require("../controllers/login");
+currUser ='';
 
 //we can take either approach, you can comment the PUG code and open HTML or vice versa 
 
@@ -18,7 +19,7 @@ router.post('/', function(req, res, next) {
 
 router.get('/', function(req, res){
 	//res.sendFile(path.join(__dirname + '/../public/html/homepage.html'));
-	res.render(__dirname + '/../public/html/homepage.html', {message1: 'hello', message2:''});
+	res.render(__dirname + '/../public/html/homepage.html', {message1: currUser});
 });
 
 router.post('/', function(req, res){
@@ -31,6 +32,7 @@ router.post('/', function(req, res){
 	console.log("Password matches?: " + (password == userMap.get(userName)));
 	
 	if (userMap.has(userName) && password == userMap.get(userName)) {
+		currUser = userName;
 		res.redirect('/home');
 	}
 	
