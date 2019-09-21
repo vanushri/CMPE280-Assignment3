@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 var ctrlLogin = require("../controllers/login");
-currUser ='';
 
 //we can take either approach, you can comment the PUG code and open HTML or vice versa 
 
@@ -19,24 +18,6 @@ router.post('/', function(req, res, next) {
 
 router.get('/', function(req, res){
 	res.render(__dirname + '/../public/html/homepage.html', {message1: currUser});
-});
-
-router.post('/', function(req, res){
-	
-	var userName = req.body.user;
-	var password = req.body.password;
-
-	console.log("User exists? " + userMap.has(userName));
-	console.log("Password: " + userMap.get(userName));
-	console.log("Password matches?: " + (password == userMap.get(userName)));
-	
-	if (userMap.has(userName) && password == userMap.get(userName)) {
-		currUser = userName;
-		res.redirect('/home');
-	}
-	
-	// loginerr=1 : Incorrect username and password
-	res.redirect('/login?loginerr=1');
 });
 
 
