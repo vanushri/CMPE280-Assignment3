@@ -10,11 +10,8 @@
   		Welcome <%= currUser %> !
 	<% } %>
 </h2>
-
 <h2>Learn About Climate Change</h2>
-
-<input type="text" id="input" onkeyup="myFunction()" placeholder="Search for articles.." title="Type a name">
-
+<input type="text" id="input" onkeyup="filter()" placeholder="Search for articles.." title="Type a name">
 <table id="table">
   <tr class="header">
     <th style="width:60%;">Article Name</th>
@@ -213,7 +210,7 @@
 </table>
 
 <script>
-function myFunction() {
+function filter() {
   var input, filter, table, tr, td, i, textValue;
   input = document.getElementById("input");
   filter = input.value.toUpperCase();
