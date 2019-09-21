@@ -16,13 +16,9 @@ router.post('/', function(req, res, next) {
 });
 */
 
-/*router.post('/', function(req, res, next) {
-	res.render('homePage');
-});*/
-
-
 router.get('/', function(req, res){
-	res.sendFile(path.join(__dirname + '/../public/html/homepage.html'));
+	//res.sendFile(path.join(__dirname + '/../public/html/homepage.html'));
+	res.render(__dirname + '/../public/html/homepage.html', {message1: 'hello', message2:''});
 });
 
 router.post('/', function(req, res){
@@ -37,7 +33,9 @@ router.post('/', function(req, res){
 	if (userMap.has(userName) && password == userMap.get(userName)) {
 		res.redirect('/home');
 	}
-	res.redirect('/login');
+	
+	// loginerr=1 : Incorrect username and password
+	res.redirect('/login?loginerr=1');
 });
 
 

@@ -8,12 +8,16 @@
 </head>
 <body>
 
-<!--<h1 class="h1">Climate Change</h1>-->
+
 
 <div class="login-page">
   <div>
     <form class="form" action="/home" method="post">
-    	<label>Already have an account? Sign In!</label>
+    	<label>
+		<% if (message1) { %>
+  			<%= message1 %>
+		<% } %>
+		</label>
         <input type="text" placeholder="username" name="user" required/>
      	<input type="password" placeholder="password" name="password" required/>
       <button type="submit" value="Submit">SIGN IN</button>
@@ -24,7 +28,11 @@
 <div class="login-page">
   <div>
     <form class="form" action="/login" method="post">
-   		<label>New User? Sign Up!</label>
+   		<label>
+		<% if (message2) { %>
+  			<%= message2 %>
+		<% } %>
+		</label>
         <input type="text" placeholder="username" name="user" required/>
       	<input type="password" placeholder="password" name="password" required/>
       	<button type="submit" value="Submit">REGISTER</button>
