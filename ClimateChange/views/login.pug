@@ -1,0 +1,17 @@
+doctype html
+head
+  link(rel='stylesheet' href='../stylesheets/style.css')
+.login-page
+  div
+    form.form(action='/home' method='post')
+      label
+      input(type='text' placeholder='username' name='user' required='')
+      input(type='password' placeholder='password' name='password' required='')
+      button(type='submit' value='Submit') SIGN IN
+.login-page
+  div
+    form.form(action='/login' method='post')
+      label
+      input(type='text' placeholder='username' name='user' required='')
+      input(type='password' placeholder='password' name='password' required='')
+      button(type='submit' value='Submit') REGISTER
