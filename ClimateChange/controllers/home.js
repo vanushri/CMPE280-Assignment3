@@ -7,17 +7,21 @@ var path = require('path');
 
 //Approach 1 : home page with HTML
 //router.post('/', ctrlLogin.post_login);
-
-
 //Approach 2 : home page with PUG
 /*
 router.post('/', function(req, res, next) {
 	res.render('homeP', { title1: 'Hello' });
 });
 */
-
+/*
 router.get('/', function(req, res){
 	res.render(__dirname + '/../public/html/homepage.html', {message1: currUser});
+});
+*/
+
+
+router.post('/', function(req, res, next) {
+	res.render('home', { title1: 'Hello' });
 });
 
 

@@ -4,7 +4,13 @@ var router = express.Router();
 userMap = new Map();
 currUser ='';
 
+
+router.get('/', function(req, res, next) {
+	res.render('login', { title: 'Express' });
+});
+
 /* LOGIN PAGE IN HTML */
+/*
 router.get('/', function(req,res) {
 	var messages = {
 			message1: "",
@@ -56,5 +62,6 @@ router.post('/signin', function(req, res){
 	// loginerr=1 : Incorrect username and password
 	return res.redirect('/login?loginerr=1');
 });
+*/
 
 module.exports = router;
