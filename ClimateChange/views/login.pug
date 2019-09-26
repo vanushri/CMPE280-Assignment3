@@ -1,17 +1,23 @@
 doctype html
 head
   link(rel='stylesheet' href='../stylesheets/style.css')
+if(loginMsg)
+  .text-white
+    .display-top
+      h1.animate-top #{loginMsg}
+if(registerMsg)
+  .text-white
+    .display-top
+      h1.animate-top #{registerMsg}
 .login-page
   div
-    form.form(action='/home' method='post')
-      label
+    form.form(action='/login/signin' method='post')
       input(type='text' placeholder='username' name='user' required='')
       input(type='password' placeholder='password' name='password' required='')
       button(type='submit' value='Submit') SIGN IN
 .login-page
   div
-    form.form(action='/login' method='post')
-      label
+    form.form(action='/login/register' method='post')
       input(type='text' placeholder='username' name='user' required='')
       input(type='password' placeholder='password' name='password' required='')
       button(type='submit' value='Submit') REGISTER

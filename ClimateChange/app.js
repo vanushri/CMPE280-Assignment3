@@ -3,16 +3,19 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var expressValidator = require('express-validator');
+var flash = require('connect-flash');
+var session = require('express-session');
 
 var indexRouter = require('./routes/index');
-var loginRouter = require('./controllers/login');
-var homeRouter = require('./controllers/home');
+var loginRouter = require('./routes/login');
+var homeRouter = require('./routes/home');
 
 
 var app = express();
 
 // view engine setup
-//app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 //app.engine('html', require('ejs').renderFile);
@@ -21,12 +24,31 @@ app.set('view engine', 'pug');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(cookieParser());
+//app.use(session({secret: 'ssshhhhh'}));
+app.use(session({
+  secret: 'ssshhhh',
+  proxy: true,
+  resave: true,
+  saveUninitialized: true
+}));
 
 app.use('/', indexRouter);
 app.use('/login', loginRouter);
 app.use('/home', homeRouter);
+
+
+
+
+//messages
+app.use(require('connect-flash')());
+app.use(function (req, res, next) {
+  res.locals.messages = require('express-messages')(req, res);
+  next();
+});
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
