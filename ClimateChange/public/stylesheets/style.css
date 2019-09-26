@@ -78,12 +78,13 @@ button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focu
 button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}
   
 }
-.form label {
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-  color: #FF0000;
-  font-size: 14px;
+.form_label {
+  font-size: 10px;
   text-align: left;
+}
+.form labelRegister {
+  font-size: 4px;
+  text-align: right;
 }
 
 body,h1 {font-family: "Raleway", sans-serif}
@@ -136,3 +137,4 @@ button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[
 #table tr.header, #myTable tr:hover {
   background-color: #f1f1f1;
 }
+
