@@ -78,14 +78,6 @@ button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focu
 button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}
   
 }
-.form_label {
-  font-size: 10px;
-  text-align: left;
-}
-.form labelRegister {
-  font-size: 4px;
-  text-align: right;
-}
 
 body,h1 {font-family: "Raleway", sans-serif}
 body, html {height: 100%}

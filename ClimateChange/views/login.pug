@@ -10,17 +10,15 @@ if(registerMsg)
     .display-top
       h1.animate-top #{registerMsg}
 .login-page
-
   div
    form.form(action='/login/signin' method='post')
-      input(type='text' placeholder='username' name='user' required='' pattern="^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$")
-      input(type='password' placeholder='password' name='password' required='' pattern="^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$")
+      input(type='text' placeholder='username' name='user' required='')
+      input(type='password' placeholder='password' name='password' required='')
       button(type='submit' value='Submit') SIGN IN
 .login-page
   div
     form.form(action='/login/register' method='post')
-     input(type='text' placeholder='username' name='user' required='' pattern="^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$")
-     p(style='font-size:10px') Use 8 characters with at least one lowercase, one uppercase, one special character (@#$%^+=)
+     input(type='text' placeholder='username' name='user' required='')
      input(type='password' placeholder='password' name='password' required='' pattern="^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$")
-     p(style='font-size:10px') Use 8 characters with at least one lowercase, one uppercase, one special character (@#$%^+=)
+     p(style='font-size:10px') Password: Use 8 characters with at least one lowercase, one uppercase, one special character (@#$%^+=)
      button(type='submit' value='Submit') REGISTER
