@@ -12,12 +12,16 @@ if(registerMsg)
 .login-page
   div
     form.form(action='/login/signin' method='post')
+      p Username: Must be at least 6-12 characters
+      p Password: Must be at least 6 characters, at least one number
       input(type='text' placeholder='username' name='user' required='')
       input(type='password' placeholder='password' name='password' required='')
       button(type='submit' value='Submit') SIGN IN
 .login-page
   div
     form.form(action='/login/register' method='post')
-      input(type='text' placeholder='username' name='user' required='')
-      input(type='password' placeholder='password' name='password' required='')
-      button(type='submit' value='Submit') REGISTER
+     p Username: Must be at least 6-12 characters
+     p Password: Must be at least 6 characters, at least one number 
+     input(type='text' placeholder='username' name='user' required='' pattern="[0-9]{6}")
+     input(type='password' placeholder='password' name='password' required='')
+     button(type='submit' value='Submit') REGISTER
