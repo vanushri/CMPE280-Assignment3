@@ -4,9 +4,11 @@ head
   link(rel='stylesheet' href='../stylesheets/homepage.css')
   link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
   link(rel='stylesheet' href='../stylesheets/heart.css')
+  link(rel='stylesheet' href='../stylesheets/navbar.css')
 if(userName)
   a(href='/login/signout') Sign Out
   h2 Welcome #{userName}
+
 
 h2 Learn About Climate Change
 input#input(type='text' onkeyup='filterArticles()' placeholder='Search for articles..' title='Type a name')
@@ -149,7 +151,12 @@ script.
   }
   }
   }
- script.
+  $(&apos;ul.nav li.dropdown&apos;).hover(function() {
+    $(this).find(&apos;.dropdown-menu&apos;).stop(true, true).delay(200).fadeIn(500);
+  }, function() {
+    $(this).find(&apos;.dropdown-menu&apos;).stop(true, true).delay(200).fadeOut(500);
+    });
+script.
   $(".heart.fa").click(function() {
   $(this).toggleClass("fa-heart fa-heart-o");
   });
