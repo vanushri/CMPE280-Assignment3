@@ -1,36 +1,27 @@
 doctype html
 head
-  meta(name='viewport' content='width=device-width, initial-scale=1')
-  link(rel='stylesheet' href='../stylesheets/homepage.css')
-h2 Learn About Climate Change
-input#input(type='text' onkeyup='filter()' placeholder='Search for articles..' title='Type a name')
-table#table(onkeydown='table()')
-script.
-  var titles = ["Investors With $16 Trillion Want Deforestation Action", "Brazilian Amazon fires scientifically linked to 2019 deforestation: report", "Will Deforestation and Warming Push the Amazon to a Tipping Point?", "Amazon fires clearly linked to deforestation, scientists say", "The Amazon is burning at record rates—and deforestation is to blame", "10 Things You Need to Know About the Fires in the Amazon", "Amazon deforestation and development heighten Amazon fire risk: study", "Editorial: Climate change is already here. 2020 could be your last chance to stop an apocalypse", "Global Warming Has Been Influencing Drought for a Century", "Mediterranean climate': California drought ends after more than 7 years, but dry conditions will return", "Developing nations should increase carbon footprint to tackle hunger: Study", "Poor countries must increase carbon footprint to address hunger, says study", "How to Get Rid of Carbon Emissions: Pay Farmers to Bury Them", "Climate Change Is Having Widespread Health Impacts", "Climate Change Is Already Hitting Europe Harder Than Anyone Expected", "The hard truths of climate change — by the numbers", "Global Warming Is Conquering the Vikings", "Why Are Hurricanes Like Dorian Stalling and Is Global Warming Involved?", "Earth’s Orbital Shifts May Have Triggered Ancient Global Warming"],
-  tr;
-  titles.forEach((v, i) => {
-  var td = document.createElement('td');
-  tr = document.createElement('tr');
-  document.getElementById('table').appendChild(tr);
-  td.appendChild(document.createTextNode(v));
-  tr.appendChild(td);
-  });
-script.
-  function filter() {
-  var input, filter, table, tr, td, i, textValue;
-  input = document.getElementById("input");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("table");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-  td = tr[i].getElementsByTagName("td")[0];
-  if (td) {
-  textValue = td.textContent || td.innerText;
-  if (textValue.toUpperCase().indexOf(filter) > -1) {
-  tr[i].style.display = "";
-  } else {
-  tr[i].style.display = "none";
-  }
-  }
-  }
-  }
+  head
+    script(type='text/javascript' src='https://canvasjs.com/assets/script/jquery-1.11.1.min.js')
+    script(type='text/javascript' src='https://canvasjs.com/assets/script/jquery.canvasjs.min.js')
+    script.
+      
+      $(function(){
+      $('#graphForm').submit(function(event) {
+      event.preventDefault();
+      var featureType = $("#feature").val();
+      jQuery.ajax({
+      url: '/graph?type='+featureType,
+      success: function(json) {
+      console.log(json);
+      $("#chartContainer").CanvasJSChart(json);
+      },
+      });
+      });
+      });
+  form#graphForm.form-inline(action='')
+    select#feature
+      option(value='temp') Avg Temparature
+      option(value='rain') Avg Rainfall
+    button.btn.btn-primary(type='submit' style='') Submit
+  #chartContainer(style='height: 300px; width: 100%;')
+  
