@@ -19,6 +19,6 @@ if(registerMsg)
   div
     form.form(action='/login/register' method='post')
      input(type='text' placeholder='username' name='user' required='')
-     input(type='password' placeholder='password' name='password' required='' pattern="^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$")
+     input(type='password' placeholder='password' name='password' required='' pattern="^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&_+=]).*$")
      p(style='font-size:10px') Password: Use 8 characters with at least one lowercase, one uppercase, one special character (@#$%^+=)
      button(type='submit' value='Submit') REGISTER
