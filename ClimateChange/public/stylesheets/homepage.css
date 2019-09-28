@@ -31,8 +31,27 @@
 }
 
 .article_div{
-    height:100%;
-    width:100%; 
-    display:block;
+  height:100%;
+  width:100%; 
+  display:block;
+}
+#heart {
+  color: grey;  
+  font-size: 50px;
 }
 
+#heart.red {
+  color: red;
+}
+
+body{
+  counter-reset: visited_counter;
+}
+
+/* a:visited {
+  color: rgb(26, 102, 42);
+  counter-increment: visited_counter;
+}
+a:visited::after{
+  content: "Viewed"
+} */

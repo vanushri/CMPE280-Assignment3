@@ -11,7 +11,7 @@ var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
 var homeRouter = require('./routes/home');
 var homeViewRouter = require('./routes/homeView');
-
+var profileRouter = require('./routes/profile');
 var app = express();
 
 // view engine setup
@@ -39,6 +39,7 @@ app.use('/', indexRouter);
 app.use('/login', loginRouter);
 app.use('/home', homeRouter);
 app.use('/homeView', homeViewRouter);
+app.use('/profile', profileRouter); 
 
 
 

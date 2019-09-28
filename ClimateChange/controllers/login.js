@@ -74,6 +74,8 @@ module.exports.logged_in = function(req, res, next)
 		res.redirect('/login');
 		//res.render('login', {registerMsg : 'Please log in !'});
 	}
+
+	
 	
 };
 
