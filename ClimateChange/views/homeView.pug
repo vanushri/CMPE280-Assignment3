@@ -1,10 +1,14 @@
 doctype html
 head
   head
+    link(rel='stylesheet' href='../stylesheets/style.css')
     script(type='text/javascript' src='https://canvasjs.com/assets/script/jquery-1.11.1.min.js')
     script(type='text/javascript' src='https://canvasjs.com/assets/script/jquery.canvasjs.min.js')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     link(rel='stylesheet' href='../stylesheets/homepage.css')
+
+
+
 
     script.
       $(function(){
@@ -21,11 +25,13 @@ head
       });
       });
   form#graphForm.form-inline(action='')
-    select#feature
+    label  Input fields for the graph 
+    
+    select.rounded.buttonOnHome#feature
       option(value='temp') Avg Temparature
       option(value='rain') Avg Rainfall
-    button.btn.btn-primary(type='submit' style='') Submit
-  #chartContainer(style='height: 300px; width: 100%;')
+    button.buttonOnHome.rounded(type='submit' style='') View Graph
+  #chartContainer(style='height: 300px; width: 90%;')
   
 
 h2 Learn About Climate Change
@@ -148,6 +154,8 @@ table#table
         .article_div
           | Earth&rsquo;s Orbital Shifts May Have Triggered Ancient Global Warming
       i.heart.fa.fa-heart-o
+
+
 
 
 script.
