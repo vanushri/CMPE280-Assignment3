@@ -46,7 +46,18 @@
 
 body{
   counter-reset: visited_counter;
+  background-image: url('/../images/climate1.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
 }
+
+p {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+}
+
+
 
 /* a:visited {
   color: rgb(26, 102, 42);
